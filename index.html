@@ -1,3 +1,104 @@
+<!DOCTYPE html>
 <html>
-teste
+<head>
+<meta charset="UTF-8">
+<title>Galeria de Músicos</title>
+</head>
+<body>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/index.js"></script>
+	<div name="global-container" id="global-container">
+		<nav name="global-menu" id="global-menu">
+			<ul>
+				<li id="novo">Novo</li>
+				<li id="consultar">Consultar</li>
+				<li>Relatórios
+					<ul>
+						<li id="relatorio1">Relatório 1</li>
+						<li id="relatorio2">Relatório 2</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div>
+			<form name="musico" id="musico">
+				<label>Nome:</label> 
+				<input type="text" name="nome" id="nome" />
+				<br> 
+				<label>Situação:</label>
+				<select name="situacao" id="situacao">
+					<option val="OF">OF</option>
+					<option val="NO">NO</option>
+					<option val="RJ">RJ</option>
+					<option val="ENS">ENS</option>
+				</select>
+				<br> 
+				<label>Instrumento</label>
+				<select name="instrumento" id="instrumento">
+					<option val="0"  selected="selected" disabled="disabled">Escolha um instrumento</option>
+					<option val="Órgão">Órgão</option>
+					<option val="Acordeon">Acordeon</option>
+					<option val="Violino">Violino</option>
+					<option val="Viola">Viola</option>
+					<option val="Violoncelo">Violoncelo</option>
+					<option val="Flauta">Flauta</option>
+					<option val="Oboé">Oboé</option>
+					<option val="Fagote">Fagote</option>
+					<option val="Contrafagote">Contrafagote</option>
+					<option val="Clarinete">Clarinete</option>
+					<option val="Clarone">Clarone</option>
+					<option val="Contraclarone">Contraclarone</option>
+					<option val="Contraclarone baixo">Contraclarone baixo</option>
+					<option val="Sax soprano">Sax soprano</option>
+					<option val="Sax alto">Sax alto</option>
+					<option val="Sax tenor">Sax tenor</option>
+					<option val="Sax barítono">Sax barítono</option>
+					<option val="Sax baixo">Sax baixo</option>
+					<option val="Trompete">Trompete</option>
+					<option val="Cornet">Cornet</option>
+					<option val="Flughorn">Flughorn</option>
+					<option val="Pocket">Pocket</option>
+					<option val="Trompa">Trompa</option>
+					<option val="Melofone">Melofone</option>
+					<option val="Saxhorn">Saxhorn</option>
+					<option val="Trombonito">Trombonito</option>
+					<option val="Trombone">Trombone</option>
+					<option val="Barítono">Barítono</option>
+					<option val="Bombardino">Bombardino</option>
+					<option val="Tuba">Tuba</option>
+				</select>
+				<br>
+				<label>Telefone:</label> 
+				<input type="number" name="ddd" id="ddd"/>
+				<input type="number" name="telefone" id="telefone"/>
+				<label>Data de Nascimento:</label> 
+				<input type="number" name="dia" id="dia"/>/
+				<input type="number" name="mes" id="mes"/>/
+				<input type="number" name="ano" id="ano"/>
+				<label>Condição:</label>
+				<br>
+				<select name="condicao" id="condicao">
+					<option val="0"  selected="selected" disabled="disabled">Escolha uma condição</option>
+					<option val="Músico">Músico</option>
+					<option val="Organista">Organista</option>
+					<option val="Colaborador">Colaborador</option>
+					<option val="Instrutora">Instrutora</option>
+					<option val="Auxiliar">Auxiliar</option>
+					<option val="Enc. Local">Enc. Local</option>
+					<option val="Enc. Regional">Enc. Regional</option>
+					<option val="Examinadora">Examinadora</option>
+					<option val="Inativo">Inativo</option>
+				</select>
+				<label>Atualizado em:</label>
+				<input type="date"/>
+				<br>
+				<label>Observação:</label>
+				<textarea rows="10" cols="50" placeholder="Digite uma observação caso necessário"></textarea>
+				<br>
+				<input type="submit" name="submit-musico" id="submit-musico" />
+			</form>
+		</div>
+	</div>
+	<script src="./js/index-execute.js"></script>
+</body>
 </html>
