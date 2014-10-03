@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Galeria de Músicos</title>
+	<meta charset="UTF-8">
+	<title>Galeria de Músicos</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
 	<script src="./js/jquery.min.js"></script>
@@ -10,106 +11,132 @@
 	<div name="global-container" id="global-container">
 		<nav name="global-menu" id="global-menu">
 			<ul>
-				<li id="novo">Novo</li>
-				<li id="consultar">Consultar</li>
-				<li>Relatórios
-					<ul>
-						<li id="relatorio1">Relatório 1</li>
-						<li id="relatorio2">Relatório 2</li>
-					</ul>
-				</li>
+				<li id="novo" class="menu-option">Novo</li>
+				<li class="menu-divisor">|</li>
+				<li id="consultar" class="menu-option">Consultar</li>
+				<li class="menu-divisor">|</li>
+				<li id="relatorios" class="menu-option">Relatórios</li>
 			</ul>
 		</nav>
-		<div>
-			<form name="musico" id="musico">
-				<label>Nome:</label> 
-				<input type="text" name="nome" id="nome" />
+		<section id="titulo-container">
+			<h1 id="titulo">Novo</h1>
+			<hr class="divisor-titulo">
+		</section>
+		<section id="musico-container">
+			<form name="musico-form" id="musico-form">
+				<label class="size-1">Nome:</label> 
+				<input type="text" name="nome" id="nome" placeholder="Fulano da Silva" />
 				<br> 
-				<label>Situação:</label>
+				<label class="size-1">Situação:</label>
 				<select name="situacao" id="situacao">
-					<option val="OF">OF</option>
-					<option val="NO">NO</option>
-					<option val="RJ">RJ</option>
-					<option val="ENS">ENS</option>
+					<option value="OF">OF</option>
+					<option value="NO">NO</option>
+					<option value="RJ">RJ</option>
+					<option value="ENS">ENS</option>
 				</select>
-				<label>Instrumento</label>
+				<label>Instrumento:</label>
 				<select name="instrumento" id="instrumento">
-					<option val="0"  selected="selected" disabled="disabled">Escolha um instrumento</option>
-					<option val="Órgão">Órgão</option>
-					<option val="Acordeon">Acordeon</option>
-					<option val="Violino">Violino</option>
-					<option val="Viola">Viola</option>
-					<option val="Violoncelo">Violoncelo</option>
-					<option val="Flauta">Flauta</option>
-					<option val="Oboé">Oboé</option>
-					<option val="Fagote">Fagote</option>
-					<option val="Contrafagote">Contrafagote</option>
-					<option val="Clarinete">Clarinete</option>
-					<option val="Clarone">Clarone</option>
-					<option val="Contraclarone">Contraclarone</option>
-					<option val="Contraclarone baixo">Contraclarone baixo</option>
-					<option val="Sax soprano">Sax soprano</option>
-					<option val="Sax alto">Sax alto</option>
-					<option val="Sax tenor">Sax tenor</option>
-					<option val="Sax barítono">Sax barítono</option>
-					<option val="Sax baixo">Sax baixo</option>
-					<option val="Trompete">Trompete</option>
-					<option val="Cornet">Cornet</option>
-					<option val="Flughorn">Flughorn</option>
-					<option val="Pocket">Pocket</option>
-					<option val="Trompa">Trompa</option>
-					<option val="Melofone">Melofone</option>
-					<option val="Saxhorn">Saxhorn</option>
-					<option val="Trombonito">Trombonito</option>
-					<option val="Trombone">Trombone</option>
-					<option val="Barítono">Barítono</option>
-					<option val="Bombardino">Bombardino</option>
-					<option val="Tuba">Tuba</option>
+					<option value="0"  selected="selected" disabled="disabled">Escolha um instrumento</option>
+					<option value="Órgão">Órgão</option>
+					<option value="Acordeon">Acordeon</option>
+					<option value="Violino">Violino</option>
+					<option value="Viola">Viola</option>
+					<option value="Violoncelo">Violoncelo</option>
+					<option value="Flauta">Flauta</option>
+					<option value="Oboé">Oboé</option>
+					<option value="Fagote">Fagote</option>
+					<option value="Contrafagote">Contrafagote</option>
+					<option value="Clarinete">Clarinete</option>
+					<option value="Clarone">Clarone</option>
+					<option value="Contraclarone">Contraclarone</option>
+					<option value="Contraclarone baixo">Contraclarone baixo</option>
+					<option value="Sax soprano">Sax soprano</option>
+					<option value="Sax alto">Sax alto</option>
+					<option value="Sax tenor">Sax tenor</option>
+					<option value="Sax barítono">Sax barítono</option>
+					<option value="Sax baixo">Sax baixo</option>
+					<option value="Trompete">Trompete</option>
+					<option value="Cornet">Cornet</option>
+					<option value="Flughorn">Flughorn</option>
+					<option value="Pocket">Pocket</option>
+					<option value="Trompa">Trompa</option>
+					<option value="Melofone">Melofone</option>
+					<option value="Saxhorn">Saxhorn</option>
+					<option value="Trombonito">Trombonito</option>
+					<option value="Trombone">Trombone</option>
+					<option value="Barítono">Barítono</option>
+					<option value="Bombardino">Bombardino</option>
+					<option value="Tuba">Tuba</option>
 				</select>
 				<br>
-				<label>Região:</label>
-				
-				<!--
-				
-					TERMINAR DE COLOCAR AS REGIOES
-					TERMINAR DE COLOCAR AS REGIOES
-					TERMINAR DE COLOCAR AS REGIOES
-					TERMINAR DE COLOCAR AS REGIOES
-					TERMINAR DE COLOCAR AS REGIOES
-					TERMINAR DE COLOCAR AS REGIOES
-				 
-				 -->
-				
-				<label>Telefone:</label>
-				<input type="number" name="ddd" id="ddd"/>
-				<input type="number" name="telefone" id="telefone"/>
-				<label>Data de Nascimento:</label> 
-				<input type="number" name="dia" id="dia"/>/
-				<input type="number" name="mes" id="mes"/>/
-				<input type="number" name="ano" id="ano"/>
 				<label>Condição:</label>
-				<br>
 				<select name="condicao" id="condicao">
-					<option val="0"  selected="selected" disabled="disabled">Escolha uma condição</option>
-					<option val="Músico">Músico</option>
-					<option val="Organista">Organista</option>
-					<option val="Colaborador">Colaborador</option>
-					<option val="Instrutora">Instrutora</option>
-					<option val="Auxiliar">Auxiliar</option>
-					<option val="Enc. Local">Enc. Local</option>
-					<option val="Enc. Regional">Enc. Regional</option>
-					<option val="Examinadora">Examinadora</option>
-					<option val="Inativo">Inativo</option>
+					<option value="0"  selected="selected" disabled="disabled">Escolha uma condição</option>
+					<option value="Músico">Músico</option>
+					<option value="Organista">Organista</option>
+					<option value="Colaborador">Colaborador</option>
+					<option value="Instrutora">Instrutora</option>
+					<option value="Auxiliar">Auxiliar</option>
+					<option value="Enc. Local">Enc. Local</option>
+					<option value="Enc. Regional">Enc. Regional</option>
+					<option value="Examinadora">Examinadora</option>
+					<option value="Inativo">Inativo</option>
 				</select>
+				<label>Região:</label>
+				<select name="regiao" id="regiao">
+					<option value="0"  selected="selected" disabled="disabled">Escolha uma região</option>
+					<option value="Beira-Mar">Beira-Mar</option>
+					<option value="Central">Central</option>
+					<option value="Cidade Náutica">Cidade Náutica</option>
+					<option value="Gleba 2">Gleba 2</option>
+					<option value="Ilha Sambaiatuba">Ilha Sambaiatuba</option>
+					<option value="Japuí">Japuí</option>
+					<option value="Jd. Humaitá">Jd. Humaitá</option>
+					<option value="Jd. Quarentenário">Jd. Quarentenário</option>
+					<option value="Jd. Rio Branco">Jd. Rio Branco</option>
+					<option value="México 70">México 70</option>
+					<option value="Náutica 3">Náutica 3</option>
+					<option value="Pq. Continental">Pq. Continental</option>
+					<option value="Pq. das Bandeiras">Pq. das Bandeiras</option>
+					<option value="Ponte do Mar Pequeno">Ponte do Mar Pequeno</option>
+					<option value="Samaritá">Samaritá</option>
+					<option value="Sambaiatuba">Sambaiatuba</option>
+					<option value="Squaré">Squaré</option>
+					<option value="Vila Fátima">Vila Fátima</option>
+					<option value="Vila Jóquei I">Vila Jóquei I</option>
+					<option value="Vila Jóquei II">Vila Jóquei II</option>
+					<option value="Vila Margarida">Vila Margarida</option>
+					<option value="Vila Melo">Vila Melo</option>
+					<option value="Vila Ponte Nova">Vila Ponte Nova</option>
+					<option value="Vila Voturuá">Vila Voturuá</option>
+				</select>
+				<br>
+				<label>Telefone:</label>
+				<input type="text" name="ddd" id="ddd" placeholder="99"/>
+				<input type="text" name="telefone" id="telefone" placeholder="1234-5678"/>
+				<label>Data de Nascimento:</label> 
+				<input type="text" name="dia" id="dia" placeholder="01"/>/
+				<input type="text" name="mes" id="mes" placeholder="01"/>/
+				<input type="text" name="ano" id="ano" placeholder="1990"/>
+				
+				<br>
 				<label>Atualizado em:</label>
-				<input type="date"/>
+				<input disabled="disabled" type="text"/>
 				<br>
 				<label>Observação:</label>
-				<textarea rows="10" cols="50" placeholder="Digite uma observação caso necessário"></textarea>
 				<br>
-				<input type="submit" name="submit-musico" id="submit-musico" />
+				<textarea name="observacao" id="observacao" rows="10" cols="50" placeholder="Digite uma observação caso necessário"></textarea>
+				<br>
+				<input type="submit" name="submit-musico" id="submit-musico" value="Salvar" class="bt-confirmar" />
 			</form>
-		</div>
+		</section>
+		<section id="consulta-container">
+			<form id="consulta-form">
+			</form>
+		</section>
+		<section id="relatorios-container">
+			Totais
+		</section>
 	</div>
 	<script src="./js/index-execute.js"></script>
 </body>

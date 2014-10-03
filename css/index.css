@@ -1,0 +1,126 @@
+#global-container {
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+}
+
+#global-menu {
+	display: inline-block;
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+
+#titulo-container, #musico-container, #consulta-container, #relatorios-container {
+	dsplay: block;
+	height: auto;
+	margin: 0 auto;
+	width: 550px;
+	text-align: left;
+	padding-left: 25px;
+}
+
+#musico-container {
+	line-height: 40px;
+}
+
+#musico-container label, #musico-container input, #musico-container select {
+	color: #555;
+}
+
+#musico-container input, #musico-container select, #musico-container textarea {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	border: solid 1px #CCC;
+}
+
+#titulo {
+	margin-bottom: 0px; 
+	margin-top: 20px;
+	color: #007;
+	font-weight: bold;
+}
+
+.divisor-titulo {
+	margin-bottom: 20px; 
+	margin-top: 5px;
+}
+
+#global-menu li {
+	list-style: none;
+	display:inline-block;
+	float: left;
+}
+
+#global-menu .menu-option {
+	width: 300px;
+	font-size: 20px;
+	cursor: pointer;
+	color: #AAA;
+}
+
+#global-menu .menu-option:hover {
+	color: #00A;
+	font-weight: bold;
+}
+
+#global-menu .menu-divisor {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.size-1 {
+	display: inline-block;
+    width: 60px;
+}
+
+#nome {
+	width: 440px;
+}
+
+#situacao {
+	width: 70px;
+	margin-right: 20px;	
+}
+
+#condicao {
+	margin-right: 20px;
+}
+
+#ddd, #dia, #mes {
+	text-align: center;
+	width: 25px;
+}
+
+#telefone {
+	text-align: center;
+	width: 80px;
+	margin-right: 25px;
+}
+
+#ano {
+    text-align: center;
+    width: 40px;
+}
+
+#observacao {
+	width: 505px;
+}
+
+.bt-confirmar {
+	font-size: 15px;
+	height: 30px;
+	letter-spacing: 2px;
+	width: auto;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.bt-confirmar:hover {
+	background-color: #CFF;
+}
