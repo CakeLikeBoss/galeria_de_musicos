@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conexao>
+	<host>127.0.0.1</host>
+	<user>root</user>
+	<password></password>
+	<database>db_galeria_de_musicos</database>
+</conexao>

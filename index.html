@@ -8,8 +8,8 @@
 <body>
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/index.js"></script>
-	<div name="global-container" id="global-container">
-		<nav name="global-menu" id="global-menu">
+	<div id="global-container">
+		<nav id="global-menu">
 			<ul>
 				<li id="novo" class="menu-option">Novo</li>
 				<li class="menu-divisor">|</li>
@@ -23,7 +23,7 @@
 			<hr class="divisor-titulo">
 		</section>
 		<section id="musico-container">
-			<form name="musico-form" id="musico-form">
+			<form name="musico-form" method="post" id="musico-form">
 				<label class="size-1">Nome:</label> 
 				<input type="text" name="nome" id="nome" placeholder="Fulano da Silva" />
 				<br> 
@@ -118,7 +118,6 @@
 				<input type="text" name="dia" id="dia" placeholder="01"/>/
 				<input type="text" name="mes" id="mes" placeholder="01"/>/
 				<input type="text" name="ano" id="ano" placeholder="1990"/>
-				
 				<br>
 				<label>Atualizado em:</label>
 				<input disabled="disabled" type="text"/>
@@ -127,15 +126,51 @@
 				<br>
 				<textarea name="observacao" id="observacao" rows="10" cols="50" placeholder="Digite uma observação caso necessário"></textarea>
 				<br>
-				<input type="submit" name="submit-musico" id="submit-musico" value="Salvar" class="bt-confirmar" />
+				<input type="submit" name="submit-musico" id="submit-musico" value="Salvar" class="bt-confirmar bt-disabled" />
 			</form>
 		</section>
 		<section id="consulta-container">
 			<form id="consulta-form">
+				<label>Palavra-Chave:</label>
+				<input type="text" name="palavra" id="palavra" placeholder="Fulano da Silva" />
+				<label>Região:</label>
+				<select name="regiao-consulta" id="regiao-consulta">
+					<option value="0"  selected="selected">Todas as regiões</option>
+					<option value="Beira-Mar">Beira-Mar</option>
+					<option value="Central">Central</option>
+					<option value="Cidade Náutica">Cidade Náutica</option>
+					<option value="Gleba 2">Gleba 2</option>
+					<option value="Ilha Sambaiatuba">Ilha Sambaiatuba</option>
+					<option value="Japuí">Japuí</option>
+					<option value="Jd. Humaitá">Jd. Humaitá</option>
+					<option value="Jd. Quarentenário">Jd. Quarentenário</option>
+					<option value="Jd. Rio Branco">Jd. Rio Branco</option>
+					<option value="México 70">México 70</option>
+					<option value="Náutica 3">Náutica 3</option>
+					<option value="Pq. Continental">Pq. Continental</option>
+					<option value="Pq. das Bandeiras">Pq. das Bandeiras</option>
+					<option value="Ponte do Mar Pequeno">Ponte do Mar Pequeno</option>
+					<option value="Samaritá">Samaritá</option>
+					<option value="Sambaiatuba">Sambaiatuba</option>
+					<option value="Squaré">Squaré</option>
+					<option value="Vila Fátima">Vila Fátima</option>
+					<option value="Vila Jóquei I">Vila Jóquei I</option>
+					<option value="Vila Jóquei II">Vila Jóquei II</option>
+					<option value="Vila Margarida">Vila Margarida</option>
+					<option value="Vila Melo">Vila Melo</option>
+					<option value="Vila Ponte Nova">Vila Ponte Nova</option>
+					<option value="Vila Voturuá">Vila Voturuá</option>
+				</select>
+				<input type="image" alt="pesquisar" src="./img/lupa.png" name="submit-consulta" id="submit-consulta" />
 			</form>
+			<div id="resultados">
+			</div>
 		</section>
 		<section id="relatorios-container">
-			Totais
+			<ul>
+				<li id="rel-totais">Totais - Exibe o total de músicos por região</li>
+				<li id="rel-detalhado">Detalhado - Exibe o total de cada instrumento por região</li>
+			</ul>
 		</section>
 	</div>
 	<script src="./js/index-execute.js"></script>
